@@ -79,6 +79,7 @@ export default defineType({
           },
           styles: [],
         }),
+        
         // Custom blocks
         defineArrayMember({
           name: 'timeline',
@@ -114,6 +115,15 @@ export default defineType({
         }),
       ],
     }),
+    defineField({
+  name: 'heroImage',
+  title: 'About me photo',
+  type: 'image',
+  options: { hotspot: true },
+  fields: [
+    defineField({ name: 'alt', title: 'Alt text', type: 'string' }),
+  ],
+}),
   ],
   preview: {
     select: {
