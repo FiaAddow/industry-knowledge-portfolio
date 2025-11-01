@@ -9,6 +9,8 @@ interface NavbarProps {
   data: SettingsQueryResult
 }
 export function Navbar(props: NavbarProps) {
+
+  debugger;
   const {data} = props
   const dataAttribute =
     data?._id && data?._type

@@ -29,6 +29,10 @@ export const pagesBySlugQuery = defineQuery(`
     overview,
     title,
     "slug": slug.current,
+    image {
+      asset->,
+      alt
+    }
   }
 `)
 

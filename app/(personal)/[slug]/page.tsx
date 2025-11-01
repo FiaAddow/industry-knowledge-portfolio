@@ -45,7 +45,8 @@ export default async function PageSlugRoute({params}: Props) {
     notFound()
   }
 
-  const {body, overview, title} = data ?? {}
+  const {body, overview, title, image} = data ?? {}
+  
 
   return (
     <div>
@@ -58,6 +59,17 @@ export default async function PageSlugRoute({params}: Props) {
           title={title || (data?._id ? 'Untitled' : '404 Page Not Found')}
           description={overview}
         />
+        
+        {/* Image */}
+        {image?.asset && (
+          <div className="mt-8 mb-12">
+            <img
+              src={image.asset.url}
+              alt={image.alt}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        )}
 
         {/* Body */}
         {body && (
