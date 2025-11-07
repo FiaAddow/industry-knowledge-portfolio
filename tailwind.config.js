@@ -7,13 +7,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './intro-template/**/*.{js,ts,jsx,tsx}',
   ],
-    theme: {
-    ...theme,
-    extend: {
-      colors: {
-        'custom-dark': '#05081C',
-      },
-    },
   theme: {
     ...theme,
     // Overriding fontFamily to use @next/font loaded families
