@@ -32,6 +32,9 @@ export const pagesBySlugQuery = defineQuery(`
     image {
       asset->,
       alt
+    },
+    list[] {
+      asset->
     }
   }
 `)
