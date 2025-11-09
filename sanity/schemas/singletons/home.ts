@@ -59,6 +59,12 @@ export default defineType({
       validation: (rule) => rule.max(155).required(),
     }),
     defineField({
+      name: 'coverImage',
+      title: 'Cover Image',
+      description: 'This image will be displayed prominently on your homepage.',
+      type: 'image'
+    }),
+    defineField({
       name: 'showcaseProjects',
       title: 'Showcase projects',
       description: 'These are the projects that will appear first on your landing page.',

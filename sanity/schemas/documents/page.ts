@@ -1,5 +1,5 @@
-import {DocumentIcon, ImageIcon} from '@sanity/icons'
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import { DocumentIcon, ImageIcon } from '@sanity/icons'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   type: 'document',
@@ -79,7 +79,7 @@ export default defineType({
           },
           styles: [],
         }),
-        
+
         // Custom blocks
         defineArrayMember({
           name: 'timeline',
@@ -116,20 +116,26 @@ export default defineType({
       ],
     }),
     defineField({
-  name: 'image',
-  title: 'photo',
-  type: 'image',
-  options: { hotspot: true },
-  fields: [
-    defineField({ name: 'alt', title: 'Alt text', type: 'string' }),
-  ],
-}),
+      name: 'image',
+      title: 'photo',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        defineField({ name: 'alt', title: 'Alt text', type: 'string' }),
+      ],
+    }),
+    defineField({
+      name: 'list',
+      title: 'List',
+      type: 'array',
+      of: [{ type: 'image' }],
+    }),
   ],
   preview: {
     select: {
       title: 'title',
     },
-    prepare({title}) {
+    prepare({ title }) {
       return {
         subtitle: 'Page',
         title,

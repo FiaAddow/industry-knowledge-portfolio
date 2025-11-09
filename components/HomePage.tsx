@@ -38,6 +38,7 @@ export async function HomePage({data}: HomePageProps) {
         />
       )}
       {/* Showcase projects */}
+      <div className='text-4xl font-bold'>My projects</div>
       <div className="mx-auto max-w-[100rem] rounded-md border">
         <OptimisticSortOrder id={data?._id} path={'showcaseProjects'}>
           {showcaseProjects &&
@@ -49,7 +50,7 @@ export async function HomePage({data}: HomePageProps) {
               }
               return (
                 <Link
-                  className="flex flex-col gap-x-5 p-2 transition odd:border-b odd:border-t hover:bg-gray-50/50 xl:flex-row odd:xl:flex-row-reverse"
+                  className="flex flex-col gap-x-5 p-2 transition bg-white odd:border-b odd:border-t hover:bg-gray-50/50 xl:flex-row odd:xl:flex-row-reverse"
                   key={project._key}
                   href={href}
                   data-sanity={dataAttribute?.(['showcaseProjects', {_key: project._key}])}
